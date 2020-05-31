@@ -1,0 +1,8 @@
+{
+  "name": "cocoApp",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}
