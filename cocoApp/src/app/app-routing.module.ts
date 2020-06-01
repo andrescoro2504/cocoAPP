@@ -22,7 +22,12 @@ const routes: Routes = [
   {
     path: 'create',
     loadChildren: () => import('./create/create.module').then( m => m.CreatePageModule)
-  },
+  },  {
+    path: 'forgot',
+    loadChildren: () => import('./forgot/forgot.module').then( m => m.ForgotPageModule)
+  }
+
+
 ];
 
 @NgModule({
