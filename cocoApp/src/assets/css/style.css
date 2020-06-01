@@ -265,7 +265,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
     Scroll Up 
 -----------------------------------------*/
 #scrollUp {
-  background: #40A944 none repeat scroll 0 0;
+  background:#3b352b none repeat scroll 0 0;
   bottom: 85px;
   color: #ffffff;
   cursor: pointer;
@@ -404,7 +404,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 
 /* 02. Element */
 .button {
-  background: #40A944;
+  background: red;
   box-shadow: none;
   color: #ffffff;
   display: inline-block;
@@ -524,7 +524,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   font-size: 14px;
 }
 .offcanvas_footer span a:hover {
-  color: #40A944;
+  color: red;
 }
 
 .slinky-theme-default a:not(.back) {
@@ -535,7 +535,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 }
 .slinky-theme-default a:not(.back):hover {
   background: inherit;
-  color: #40A944;
+  color: red;
 }
 
 .canvas_close {
@@ -5157,6 +5157,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 /*  07. footer area css here */
 .footer_top {
   padding-bottom: 64px;
+  padding-top: 25px;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .footer_top {
@@ -5336,7 +5337,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 
 .footer_bottom {
   padding: 29px 0;
-  background: #40A944;
+  background: #3b352b;
 }
 @media only screen and (max-width: 767px) {
   .footer_bottom {
@@ -7937,7 +7938,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   }
 }
 .account_form form {
-  border: 1px solid #ededed;
+  border: 0px solid #ededed;
   padding: 23px 20px 29px;
   border-radius: 5px;
 }
@@ -7960,7 +7961,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   width: 100%;
 }
 .account_form button {
-  background: #40A944;
+  background: #3b352b;
   border: 0;
   color: #ffffff;
   display: inline-block;
@@ -7977,7 +7978,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   border-radius: 20px;
 }
 .account_form button:hover {
-  background: #222222;
+  background: #3b352b;
 }
 
 .login_submit label input[type="checkbox"] {
@@ -7987,7 +7988,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 }
 
 .login_submit {
-  text-align: right;
+  text-align: center;
 }
 .login_submit a {
   font-size: 15px;
@@ -8016,9 +8017,11 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 
 .customer_login {
   padding: 69px 0 70px;
+  background-color: #f4f7f8;
 }
 @media only screen and (max-width: 767px) {
   .customer_login {
+    background-color: #f4f7f8;
     padding: 58px 0 60px;
   }
 }
