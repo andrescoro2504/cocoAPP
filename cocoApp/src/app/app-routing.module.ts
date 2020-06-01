@@ -22,9 +22,18 @@ const routes: Routes = [
   {
     path: 'create',
     loadChildren: () => import('./create/create.module').then( m => m.CreatePageModule)
-  },  {
+  },
+  {
     path: 'forgot',
     loadChildren: () => import('./forgot/forgot.module').then( m => m.ForgotPageModule)
+  },
+  {
+    path: 'index',
+    loadChildren: () => import('./index/index.module').then( m => m.IndexPageModule)
+  },
+  {
+    path: 'homeview',
+    loadChildren: () => import('./home-view/home-view.module').then( m => m.HomeViewPageModule)
   }
 
 

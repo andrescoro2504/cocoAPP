@@ -3,7 +3,11 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiURL:"http://www.devsecuresoft.com:8000/kapak/",
+  //apiURL:"http://127.0.0.1:5000/kapak/",
+  username:"kapak",
+  password:"UserKapak2020!",
 };
 
 /*

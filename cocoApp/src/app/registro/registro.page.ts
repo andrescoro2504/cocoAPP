@@ -5,6 +5,10 @@ import { AuthService } from '../auth/auth.service';
 import { AlertController, ToastController, LoadingController } from '@ionic/angular';
 import { Message } from '@angular/compiler/src/i18n/i18n_ast';
 import { async } from '@angular/core/testing';
+import Swal from 'sweetalert2';
+import { UserServiceService } from '../services/user-service.service';
+import { Router } from '@angular/router';
+import { User } from '../models/user';
 
 @Component({
   selector: 'app-registro',
@@ -14,10 +18,11 @@ import { async } from '@angular/core/testing';
 export class RegistroPage{
 
   constructor(
-    private authService: AuthService,
+    private userService: UserServiceService,
     private alertCtrl: AlertController,
     private toastCtril: ToastController,
     private loadingCtrl: LoadingController,
+    private router: Router
   ) { }
 
   form = new FormGroup({
@@ -46,6 +51,61 @@ export class RegistroPage{
     ]),
   });
 
+  onSubmit(){
+
+    let model: User = {
+      use_firstname: this.form.get('firstname').value,
+      use_lastname: this.form.get('lastname').value,
+      //use_numTelPref: NumTelPref,
+      use_numTelPref: "593",
+      use_numTelf: this.form.get('numTelefono').value,
+      use_email: this.form.get('correo').value,
+      use_password: this.form.get('password').value,
+      use_picture: "A",
+      use_profile: "A",
+      use_terminos:true
+    }
+
+    this.userService.crearUser(model).subscribe((val) => {
+        
+      console.log(val);
+      
+      let resp = val['message'];
+
+      if (resp == undefined) {
+        Swal.fire({
+          position: 'center',
+          icon: 'success',
+          title: "Ingreso Exito",
+          showConfirmButton: false,
+          timer: 2500
+        });
+      } else {
+        Swal.fire({
+          position: 'center',
+          icon: 'error',
+          title: resp,
+          showConfirmButton: false,
+          timer: 2500
+        });
+      }
+
+      this.form.reset();
+
+    }, (err: any) => {
+      Swal.fire({
+        position: 'center',
+        icon: 'error',
+        title: err,
+        showConfirmButton: false,
+        timer: 2500
+      });
+    });
+  
+  }
+
+
+  /*
   async onSubmit(){
     const loading = await this.loadingCtrl.create({message: 'Registrando...'});
     await loading.present();
@@ -67,4 +127,5 @@ export class RegistroPage{
       
     );
   }
+  */
 }
